@@ -11,6 +11,18 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'fugitive.vim'
+Plugin 'bling/vim-airline'
+Plugin 'Syntastic'
+Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'ctrlp.vim'
+Plugin 'git@github.com:terryma/vim-multiple-cursors.git'
+Plugin 'rails.vim'
+Plugin 'git@github.com:airblade/vim-gitgutter.git'
+Plugin 'surround.vim'
+Plugin 'mattn/emmet-vim'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
