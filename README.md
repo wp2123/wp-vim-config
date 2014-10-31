@@ -8,3 +8,4 @@ I'll record the config here.
 
 #Plugins
 1. Vundle.vim -- to manage my plugins of vim
+2. solarized -- manage colorscheme
