@@ -23,9 +23,7 @@ Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'surround.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Tagbar'
-Plugin 'git@github.com:scrooloose/nerdcommenter.git'
 Plugin 'git@github.com:scrooloose/nerdcommenter.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'Tabular'
@@ -33,8 +31,10 @@ Plugin 'Haml'
 Plugin 'gitv'
 Plugin 'git@github.com:skammer/vim-css-color.git'
 Plugin 'Handlebars'
-Plugin 'Handlebars'
 Plugin 'javascript.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'ruby.vim'
+Plugin 'JSON.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -59,3 +59,6 @@ filetype plugin indent on    " required
 " solarized colorscheme config
 set background=dark
 colorscheme solarized
+
+" YCM config
+let g:ycm_min_num_of_chars_for_completion = 1 
