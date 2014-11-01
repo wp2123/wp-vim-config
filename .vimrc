@@ -61,4 +61,37 @@ set background=dark
 colorscheme solarized
 
 " YCM config
-let g:ycm_min_num_of_chars_for_completion = 1 
+let g:ycm_min_num_of_chars_for_completion=1 
+
+" skip macvim scheme
+let macvim_skip_colorscheme=1
+
+
+autocmd InsertLeave * se nocul 
+autocmd InsertEnter * se cul " 用浅色高亮当前行
+
+set smartindent " 智能对齐
+
+set autoindent " 自动对齐
+
+set confirm " 在处理未保存或只读文件的时候，弹出确认
+
+set tabstop=2 " Tab键的宽度
+
+set softtabstop=4
+set shiftwidth=4 "  统一缩进为4
+
+set number " 显示行号
+
+set hlsearch
+set incsearch " 搜索逐字符高亮
+
+set gdefault " 行内替换
+
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936,utf-16,big5,euc-jp,latin1 " 编码设置
+
+set showmatch " 高亮显示对应的括号
+
+set matchtime=5 " 对应括号高亮的时间（单位是十分之一秒）
+
