@@ -32,4 +32,6 @@ I'll record the config here.
 23. Plugin 'git@github.com:skammer/vim-css-color.git'
 24. Plugin 'Handlebars'
 25. Plugin 'JSON.vim'
-26. Plugin 'javascript.vim'
+26. Plugin 'git@github.com:marijnh/tern_for_vim.git'
+27. Plugin 'pangloss/vim-javascript'
+28. Plugin 'git@github.com:spf13/vim-autoclose.git'

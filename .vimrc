@@ -31,11 +31,12 @@ Plugin 'Haml'
 Plugin 'gitv'
 Plugin 'git@github.com:skammer/vim-css-color.git'
 Plugin 'Handlebars'
-Plugin 'javascript.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ruby.vim'
 Plugin 'JSON.vim'
-
+Plugin 'git@github.com:marijnh/tern_for_vim.git'
+Plugin 'git@github.com:spf13/vim-autoclose.git'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -55,6 +56,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+let mapleader=","
+
+set regexpengine=1
+syntax enable
 
 " solarized colorscheme config
 set background=dark
@@ -94,4 +99,84 @@ set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936,utf-16,big5,e
 set showmatch " 高亮显示对应的括号
 
 set matchtime=5 " 对应括号高亮的时间（单位是十分之一秒）
+ 
+" H = Home, L = End
+noremap H ^
+noremap L $
+vnoremap L g_
 
+
+"------  Window Navigation  ------
+" ,hljk = Move between windows
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>l <C-w>l
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+
+
+"------  Buffer Navigation  ------
+" Ctrl Left/h & Right/l cycle between buffers
+noremap <silent> <C-h> :bprev<CR>
+noremap <silent> <C-l> :bnext<CR>
+
+" ,q Closes the current buffer
+nnoremap <silent> <Leader>q :bd<CR>
+
+" ,Q Closes the current window
+nnoremap <silent> <Leader>Q <C-w>c
+
+
+"------  Searching  ------
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+
+" Clear search highlights when pressing ,b
+nnoremap <silent> <leader>b :nohlsearch<CR>
+
+" ------- fugitive --------
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gr :Gremove<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gm :Gmove
+nnoremap <Leader>gp :Ggrep
+nnoremap <Leader>gR :Gread<CR>
+nnoremap <Leader>gg :Git
+nnoremap <Leader>gd :Gdiff<CR>
+
+" -------- airline ---------
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" -------- syntastic ----------
+let g:syntastic_check_on_open = 1
+
+" -------- nerdtree -----------
+map <C-e> :NERDTreeToggle<CR>
+
+" -------- emmet ---------
+let g:user_emmet_mode='a'
+
+" -------- vim-javascript --------
+"  Enables HTML/CSS syntax highlighting in your JavaScript file.
+
+let javascript_enable_domhtmlcss=1
+
+" -------- jsctags -------
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/lib/node_modules/jsctags/bin/jsctags'
+\ }
+
+" ------- tagbar --------
+nmap <Leader>tt :TagbarToggle<CR>
+
+" ------- nerdcommenter ------
+nmap <D-/> <Leader>cc
+nmap // <Leader>cu
+
+" ------- tabular --------
+nmap <Leader>f :Tab/
